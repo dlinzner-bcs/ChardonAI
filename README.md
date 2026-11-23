@@ -6,7 +6,7 @@ Eine mobil optimierte, installierbare Web-App für die private lokale Analyse vo
 
 ## Auf dem Smartphone testen
 
-Die statische App wird automatisch über GitHub Pages veröffentlicht. Sie nutzt dann die lokale Browseranalyse als Fallback. Für die OpenCV-Backendanalyse die Codespaces-Schaltfläche oben verwenden: Nach dem Start wird Port `4173` veröffentlicht; die bereitgestellte Port-URL kann auf dem Smartphone geöffnet werden.
+Für den Smartphone-Test die Codespaces-Schaltfläche oben verwenden. Nach dem Start installiert Codespaces die Python-Abhängigkeiten, startet den Node-/OpenCV-Server und veröffentlicht Port `4173`. Die öffentliche Port-URL kann direkt am Smartphone geöffnet werden. Alternativ lässt sich derselbe Server über das enthaltene `Dockerfile` betreiben.
 
 ## Lokal starten
 
