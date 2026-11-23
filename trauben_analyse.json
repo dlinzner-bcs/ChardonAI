@@ -1,0 +1,612 @@
+{
+  "image": "trauben.jpg",
+  "berry_count": 43,
+  "detector_markers": 43,
+  "mean_diameter_px": 37.24,
+  "diameter_std_px": 8.33,
+  "mask_coverage_percent": 14.76,
+  "berries": [
+    {
+      "id": 1,
+      "x": 508,
+      "y": 64,
+      "radius_px": 17.12,
+      "area_px": 823.0,
+      "circularity": 0.894,
+      "confidence": 83.4,
+      "mean_bgr": [
+        69,
+        56,
+        50
+      ]
+    },
+    {
+      "id": 2,
+      "x": 408,
+      "y": 69,
+      "radius_px": 20.75,
+      "area_px": 1243.0,
+      "circularity": 0.919,
+      "confidence": 85.7,
+      "mean_bgr": [
+        73,
+        60,
+        49
+      ]
+    },
+    {
+      "id": 3,
+      "x": 486,
+      "y": 79,
+      "radius_px": 23.17,
+      "area_px": 1285.0,
+      "circularity": 0.762,
+      "confidence": 72.1,
+      "mean_bgr": [
+        75,
+        60,
+        47
+      ]
+    },
+    {
+      "id": 4,
+      "x": 386,
+      "y": 82,
+      "radius_px": 13.49,
+      "area_px": 493.0,
+      "circularity": 0.862,
+      "confidence": 85.3,
+      "mean_bgr": [
+        59,
+        48,
+        31
+      ]
+    },
+    {
+      "id": 5,
+      "x": 431,
+      "y": 96,
+      "radius_px": 24.38,
+      "area_px": 1752.0,
+      "circularity": 0.938,
+      "confidence": 90.7,
+      "mean_bgr": [
+        74,
+        58,
+        47
+      ]
+    },
+    {
+      "id": 6,
+      "x": 525,
+      "y": 97,
+      "radius_px": 20.64,
+      "area_px": 945.0,
+      "circularity": 0.706,
+      "confidence": 67.5,
+      "mean_bgr": [
+        63,
+        51,
+        41
+      ]
+    },
+    {
+      "id": 7,
+      "x": 404,
+      "y": 100,
+      "radius_px": 15.8,
+      "area_px": 726.0,
+      "circularity": 0.926,
+      "confidence": 90.7,
+      "mean_bgr": [
+        63,
+        49,
+        36
+      ]
+    },
+    {
+      "id": 8,
+      "x": 345,
+      "y": 106,
+      "radius_px": 15.8,
+      "area_px": 460.0,
+      "circularity": 0.587,
+      "confidence": 56.7,
+      "mean_bgr": [
+        127,
+        97,
+        78
+      ]
+    },
+    {
+      "id": 9,
+      "x": 432,
+      "y": 109,
+      "radius_px": 16.9,
+      "area_px": 901.0,
+      "circularity": 1.0,
+      "confidence": 99.9,
+      "mean_bgr": [
+        110,
+        86,
+        68
+      ]
+    },
+    {
+      "id": 10,
+      "x": 404,
+      "y": 112,
+      "radius_px": 20.75,
+      "area_px": 1245.0,
+      "circularity": 0.92,
+      "confidence": 93.8,
+      "mean_bgr": [
+        69,
+        54,
+        35
+      ]
+    },
+    {
+      "id": 11,
+      "x": 536,
+      "y": 114,
+      "radius_px": 23.17,
+      "area_px": 843.0,
+      "circularity": 0.5,
+      "confidence": 49.9,
+      "mean_bgr": [
+        52,
+        42,
+        36
+      ]
+    },
+    {
+      "id": 12,
+      "x": 525,
+      "y": 130,
+      "radius_px": 15.69,
+      "area_px": 620.0,
+      "circularity": 0.802,
+      "confidence": 72.7,
+      "mean_bgr": [
+        51,
+        42,
+        37
+      ]
+    },
+    {
+      "id": 13,
+      "x": 323,
+      "y": 134,
+      "radius_px": 24.38,
+      "area_px": 1311.0,
+      "circularity": 0.702,
+      "confidence": 63.5,
+      "mean_bgr": [
+        109,
+        83,
+        70
+      ]
+    },
+    {
+      "id": 14,
+      "x": 491,
+      "y": 135,
+      "radius_px": 21.85,
+      "area_px": 1338.0,
+      "circularity": 0.892,
+      "confidence": 81.7,
+      "mean_bgr": [
+        79,
+        63,
+        46
+      ]
+    },
+    {
+      "id": 15,
+      "x": 439,
+      "y": 136,
+      "radius_px": 23.17,
+      "area_px": 1483.0,
+      "circularity": 0.879,
+      "confidence": 89.6,
+      "mean_bgr": [
+        85,
+        66,
+        51
+      ]
+    },
+    {
+      "id": 16,
+      "x": 364,
+      "y": 139,
+      "radius_px": 21.96,
+      "area_px": 1322.0,
+      "circularity": 0.873,
+      "confidence": 89.7,
+      "mean_bgr": [
+        61,
+        47,
+        34
+      ]
+    },
+    {
+      "id": 17,
+      "x": 421,
+      "y": 139,
+      "radius_px": 21.96,
+      "area_px": 1392.0,
+      "circularity": 0.919,
+      "confidence": 91.5,
+      "mean_bgr": [
+        92,
+        72,
+        53
+      ]
+    },
+    {
+      "id": 18,
+      "x": 334,
+      "y": 140,
+      "radius_px": 13.49,
+      "area_px": 495.0,
+      "circularity": 0.866,
+      "confidence": 83.4,
+      "mean_bgr": [
+        114,
+        86,
+        76
+      ]
+    },
+    {
+      "id": 19,
+      "x": 318,
+      "y": 152,
+      "radius_px": 10.96,
+      "area_px": 349.0,
+      "circularity": 0.925,
+      "confidence": 85.0,
+      "mean_bgr": [
+        98,
+        74,
+        52
+      ]
+    },
+    {
+      "id": 20,
+      "x": 458,
+      "y": 153,
+      "radius_px": 20.64,
+      "area_px": 1064.0,
+      "circularity": 0.795,
+      "confidence": 75.6,
+      "mean_bgr": [
+        65,
+        53,
+        39
+      ]
+    },
+    {
+      "id": 21,
+      "x": 383,
+      "y": 163,
+      "radius_px": 21.96,
+      "area_px": 1414.0,
+      "circularity": 0.933,
+      "confidence": 92.4,
+      "mean_bgr": [
+        67,
+        52,
+        35
+      ]
+    },
+    {
+      "id": 22,
+      "x": 317,
+      "y": 167,
+      "radius_px": 21.96,
+      "area_px": 514.0,
+      "circularity": 0.339,
+      "confidence": 34.2,
+      "mean_bgr": [
+        75,
+        63,
+        39
+      ]
+    },
+    {
+      "id": 23,
+      "x": 358,
+      "y": 170,
+      "radius_px": 23.17,
+      "area_px": 1519.0,
+      "circularity": 0.901,
+      "confidence": 83.8,
+      "mean_bgr": [
+        55,
+        46,
+        29
+      ]
+    },
+    {
+      "id": 24,
+      "x": 427,
+      "y": 171,
+      "radius_px": 21.96,
+      "area_px": 1285.0,
+      "circularity": 0.848,
+      "confidence": 85.0,
+      "mean_bgr": [
+        77,
+        62,
+        41
+      ]
+    },
+    {
+      "id": 25,
+      "x": 332,
+      "y": 174,
+      "radius_px": 24.38,
+      "area_px": 1007.0,
+      "circularity": 0.539,
+      "confidence": 57.1,
+      "mean_bgr": [
+        61,
+        52,
+        34
+      ]
+    },
+    {
+      "id": 26,
+      "x": 504,
+      "y": 177,
+      "radius_px": 15.8,
+      "area_px": 699.0,
+      "circularity": 0.891,
+      "confidence": 81.0,
+      "mean_bgr": [
+        47,
+        39,
+        29
+      ]
+    },
+    {
+      "id": 27,
+      "x": 365,
+      "y": 182,
+      "radius_px": 13.49,
+      "area_px": 529.0,
+      "circularity": 0.925,
+      "confidence": 94.5,
+      "mean_bgr": [
+        84,
+        65,
+        47
+      ]
+    },
+    {
+      "id": 28,
+      "x": 480,
+      "y": 188,
+      "radius_px": 17.01,
+      "area_px": 851.0,
+      "circularity": 0.936,
+      "confidence": 90.5,
+      "mean_bgr": [
+        102,
+        81,
+        65
+      ]
+    },
+    {
+      "id": 29,
+      "x": 428,
+      "y": 195,
+      "radius_px": 9.31,
+      "area_px": 252.0,
+      "circularity": 0.925,
+      "confidence": 94.0,
+      "mean_bgr": [
+        73,
+        59,
+        40
+      ]
+    },
+    {
+      "id": 30,
+      "x": 441,
+      "y": 196,
+      "radius_px": 19.54,
+      "area_px": 992.0,
+      "circularity": 0.827,
+      "confidence": 82.1,
+      "mean_bgr": [
+        55,
+        46,
+        29
+      ]
+    },
+    {
+      "id": 31,
+      "x": 488,
+      "y": 211,
+      "radius_px": 23.17,
+      "area_px": 952.0,
+      "circularity": 0.564,
+      "confidence": 56.6,
+      "mean_bgr": [
+        54,
+        47,
+        37
+      ]
+    },
+    {
+      "id": 32,
+      "x": 459,
+      "y": 216,
+      "radius_px": 13.38,
+      "area_px": 480.0,
+      "circularity": 0.853,
+      "confidence": 83.9,
+      "mean_bgr": [
+        68,
+        56,
+        40
+      ]
+    },
+    {
+      "id": 33,
+      "x": 350,
+      "y": 223,
+      "radius_px": 13.49,
+      "area_px": 500.0,
+      "circularity": 0.875,
+      "confidence": 86.1,
+      "mean_bgr": [
+        90,
+        69,
+        56
+      ]
+    },
+    {
+      "id": 34,
+      "x": 393,
+      "y": 227,
+      "radius_px": 14.26,
+      "area_px": 550.0,
+      "circularity": 0.861,
+      "confidence": 82.5,
+      "mean_bgr": [
+        75,
+        60,
+        39
+      ]
+    },
+    {
+      "id": 35,
+      "x": 443,
+      "y": 230,
+      "radius_px": 19.32,
+      "area_px": 854.0,
+      "circularity": 0.728,
+      "confidence": 69.2,
+      "mean_bgr": [
+        60,
+        52,
+        35
+      ]
+    },
+    {
+      "id": 36,
+      "x": 340,
+      "y": 260,
+      "radius_px": 20.53,
+      "area_px": 1139.0,
+      "circularity": 0.86,
+      "confidence": 82.0,
+      "mean_bgr": [
+        81,
+        65,
+        46
+      ]
+    },
+    {
+      "id": 37,
+      "x": 380,
+      "y": 266,
+      "radius_px": 17.01,
+      "area_px": 845.0,
+      "circularity": 0.93,
+      "confidence": 92.4,
+      "mean_bgr": [
+        92,
+        74,
+        53
+      ]
+    },
+    {
+      "id": 38,
+      "x": 336,
+      "y": 280,
+      "radius_px": 23.17,
+      "area_px": 1000.0,
+      "circularity": 0.593,
+      "confidence": 60.3,
+      "mean_bgr": [
+        69,
+        59,
+        40
+      ]
+    },
+    {
+      "id": 39,
+      "x": 410,
+      "y": 283,
+      "radius_px": 18.33,
+      "area_px": 840.0,
+      "circularity": 0.796,
+      "confidence": 77.5,
+      "mean_bgr": [
+        64,
+        50,
+        36
+      ]
+    },
+    {
+      "id": 40,
+      "x": 388,
+      "y": 293,
+      "radius_px": 15.91,
+      "area_px": 702.0,
+      "circularity": 0.883,
+      "confidence": 84.2,
+      "mean_bgr": [
+        72,
+        59,
+        43
+      ]
+    },
+    {
+      "id": 41,
+      "x": 351,
+      "y": 305,
+      "radius_px": 20.75,
+      "area_px": 1257.0,
+      "circularity": 0.929,
+      "confidence": 91.4,
+      "mean_bgr": [
+        88,
+        70,
+        50
+      ]
+    },
+    {
+      "id": 42,
+      "x": 338,
+      "y": 312,
+      "radius_px": 9.75,
+      "area_px": 253.0,
+      "circularity": 0.847,
+      "confidence": 78.6,
+      "mean_bgr": [
+        61,
+        56,
+        35
+      ]
+    },
+    {
+      "id": 43,
+      "x": 376,
+      "y": 318,
+      "radius_px": 17.01,
+      "area_px": 654.0,
+      "circularity": 0.719,
+      "confidence": 64.7,
+      "mean_bgr": [
+        74,
+        60,
+        42
+      ]
+    }
+  ]
+}

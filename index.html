@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f7f6f2" />
+  <meta name="description" content="TraubenScan Rheinhessen — lokale Segmentierung und Qualitätsanalyse von Traubenbildern." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>TraubenScan Rheinhessen · Traubenqualität im Blick</title>
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="#" aria-label="TraubenScan Rheinhessen Startseite">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+      <span>Trauben<span>Scan</span></span>
+    </a>
+    <button class="icon-button" id="infoButton" aria-label="Über diese Analyse">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="eyebrow"><span class="pulse-dot"></span> Für Rheinhessen · Lokal auf Ihrem Gerät</div>
+      <h1>Jede Beere im Blick.<br><em>Die ganze Traube verstehen.</em></h1>
+      <p>Aus einem Foto wird eine detaillierte Qualitätsübersicht. Die OpenCV-Analyse läuft direkt oder auf dem angebundenen Server.</p>
+    </section>
+
+    <section class="scanner-card" aria-label="Traubenfoto-Scanner">
+      <div class="workspace" id="dropZone">
+        <canvas id="photoCanvas" aria-label="Fotografierte Traube"></canvas>
+        <canvas id="overlayCanvas" aria-label="Interaktive Analyse der Traubenbeeren"></canvas>
+        <div class="empty-state" id="emptyState">
+          <div class="scan-frame" aria-hidden="true">
+            <i></i><i></i><i></i><i></i>
+            <svg class="grape-glyph" viewBox="0 0 108 125">
+              <path class="leaf" d="M58 22c8-14 24-16 32-9-5 13-18 20-32 9Z"/>
+              <path class="stem" d="M56 24c-2 8-5 12-11 17"/>
+              <g><circle cx="44" cy="47" r="17"/><circle cx="67" cy="48" r="17"/><circle cx="31" cy="70" r="17"/><circle cx="55" cy="72" r="18"/><circle cx="78" cy="70" r="16"/><circle cx="44" cy="95" r="17"/><circle cx="66" cy="96" r="17"/><circle cx="56" cy="116" r="13"/></g>
+            </svg>
+          </div>
+          <h2>Traube aufnehmen</h2>
+          <p>Nutzen Sie eine scharfe Nahaufnahme bei gleichmäßigem Licht.</p>
+        </div>
+        <div class="analyzing" id="analyzing" hidden>
+          <span class="loader"></span>
+          <strong>Einzelne Beeren werden erkannt</strong>
+          <small id="analysisStep">Foto wird gelesen…</small>
+        </div>
+        <div class="workspace-topbar" id="workspaceTopbar" hidden>
+          <span class="image-label"><i></i> Analyse abgeschlossen</span>
+          <button class="icon-button dark" id="newPhotoButton" aria-label="Anderes Foto auswählen"><svg viewBox="0 0 24 24"><path d="M4 4v6h6M20 20v-6h-6M5 10a8 8 0 0 1 13-3M19 14a8 8 0 0 1-13 3"/></svg></button>
+        </div>
+        <button class="floating-tooltip" id="grapeTooltip" hidden></button>
+      </div>
+
+      <div class="capture-actions" id="captureActions">
+        <input type="file" id="cameraInput" accept="image/*" capture="environment" hidden />
+        <input type="file" id="uploadInput" accept="image/*" hidden />
+        <button class="primary-button" id="captureButton">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h4l1.5-2h5L16 7h4v12H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
+          Foto aufnehmen
+        </button>
+        <button class="text-button" id="uploadButton">Aus Fotos auswählen</button>
+        <button class="demo-link" id="demoButton">Kein Foto zur Hand? <span>Demo ansehen</span></button>
+      </div>
+    </section>
+
+    <section class="results" id="results" hidden aria-live="polite">
+      <div class="results-heading">
+        <div>
+          <p class="section-kicker">Traubenübersicht</p>
+          <h2>Ihre Qualitätsübersicht</h2>
+        </div>
+        <button class="share-button" id="shareButton" aria-label="Analyse teilen"><svg viewBox="0 0 24 24"><path d="M12 16V3m0 0L7 8m5-5 5 5M5 13v7h14v-7"/></svg></button>
+      </div>
+
+      <div class="metric-grid">
+        <article class="metric-card metric-main">
+          <div class="metric-icon grape-icon"><span></span><span></span><span></span></div>
+          <div><span class="metric-label">Erkannte Beeren</span><strong id="grapeCount">—</strong></div>
+        </article>
+        <article class="metric-card">
+          <span class="metric-label">Ø Durchmesser <span class="estimate-note">SCHÄTZ.</span></span>
+          <strong><span id="diameterValue">—</span><small> mm</small></strong>
+          <span class="metric-foot">Referenz aus Pixelgröße</span>
+        </article>
+        <article class="metric-card">
+          <span class="metric-label">Farbgleichmäßigkeit</span>
+          <strong><span id="uniformityValue">—</span><small>%</small></strong>
+          <div class="mini-bar"><i id="uniformityBar"></i></div>
+        </article>
+        <article class="metric-card quality-card">
+          <span class="metric-label">Visuelle Qualität</span>
+          <strong class="quality-word" id="qualityValue">—</strong>
+          <div class="quality-dots" id="qualityDots"><i></i><i></i><i></i><i></i><i></i></div>
+        </article>
+      </div>
+
+      <article class="insight-card">
+        <div class="insight-title"><span>✦</span><div><p class="section-kicker">Visuelle Einschätzung</p><h3 id="insightTitle">Ausgewogene Traube</h3></div></div>
+        <p id="insightText"></p>
+        <button id="detailsButton" aria-expanded="false">Details ansehen <span>⌄</span></button>
+        <div class="details-list" id="detailsList" hidden></div>
+      </article>
+
+      <div class="legend"><span><i class="legend-high"></i> Einwandfreies Aussehen</span><span><i class="legend-mixed"></i> Farbabweichung</span><span><i class="legend-low"></i> Prüfung empfohlen</span></div>
+      <p class="disclaimer">Visuelle Schätzwerte ersetzen keine Laboranalyse. Für reale Größen ist eine Referenz nötig; die Qualität kann über das Erscheinungsbild hinaus variieren.</p>
+    </section>
+  </main>
+
+  <footer><span>Privat aus Prinzip</span><span>Fotos werden zur Analyse verarbeitet, aber nicht gespeichert.</span></footer>
+
+  <dialog id="infoDialog">
+    <button class="icon-button dialog-close" id="closeDialog" aria-label="Schließen">×</button>
+    <div class="dialog-mark">✦</div>
+    <h2>Wie TraubenScan funktioniert</h2>
+    <p>TraubenScan nutzt leichtgewichtige Bildanalyse im Browser, um traubenfarbene Bereiche zu isolieren, einzelne Beeren zu schätzen und ihre sichtbaren Merkmale zu messen.</p>
+    <ul><li>Läuft lokal – Fotos werden nicht hochgeladen.</li><li>Tippen Sie auf eine erkannte Beere, um sie zu prüfen.</li><li>Nutzen Sie künftig Münze oder Maßstab als Referenz für reale Laborgrößen.</li></ul>
+    <button class="primary-button" id="dialogOkay">Verstanden</button>
+  </dialog>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "TraubenScan Rheinhessen — Traubenqualität im Blick",
+  "short_name": "TraubenScan",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f6f2",
+  "theme_color": "#4f6a47",
+  "description": "Traubensegmentierung und visuelle Qualitätsanalyse mit OpenCV für Rheinhessen.",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
