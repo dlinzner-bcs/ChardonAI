@@ -23,6 +23,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - name: Statische Web-App vorbereiten
         run: mkdir site && cp index.html styles.css app.js manifest.webmanifest icon.svg site/
       - uses: actions/upload-pages-artifact@v3
