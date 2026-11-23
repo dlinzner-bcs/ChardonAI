@@ -1,7 +1,7 @@
 {
   "name": "TraubenScan Rheinhessen — Traubenqualität im Blick",
   "short_name": "TraubenScan",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#f7f6f2",
   "theme_color": "#4f6a47",
